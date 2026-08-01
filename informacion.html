@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Información del servidor - Kenda MU Online</title>
+    <meta name="generator" content="WebEngine 1.2.7" />
+    <meta name="author" content="Kenda MU Online" />
+    <meta name="description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU." />
+    <meta name="keywords" content="MU, MU online, Season20, servidor privado, Kenda" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kenda MU Online" />
+    <meta property="og:description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU." />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Kenda MU Online" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:wght@400;700;900" rel="stylesheet" />
+    <link href="css/palette.css" rel="stylesheet" media="screen" />
+    <link href="css/style.css" rel="stylesheet" media="screen" />
+    <link href="css/profiles.css" rel="stylesheet" media="screen" />
+    <link href="css/castle-siege.css" rel="stylesheet" media="screen" />
+    <link href="css/override.css" rel="stylesheet" media="screen" />
+    <link href="css/kenda.css" rel="stylesheet" media="screen" />
+    <script>
+      var baseUrl = ""
+    </script>
+  </head>
+  <body>
+    <!-- ============================================================
+		     GLOBAL TOP BAR — Guest state
+		============================================================ -->
+    <div class="global-top-bar">
+      <div class="global-top-bar-content">
+        <div class="row">
+          <div class="col-xs-6 text-left global-top-bar-nopadding"></div>
+          <div class="col-xs-6 text-right global-top-bar-nopadding">
+            <a href="#">Registrarse</a>
+            <span class="global-top-bar-separator">|</span>
+            <a href="#">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+		     NAVBAR
+		============================================================ -->
+    <div id="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="descargas.html">Descargas</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="rankings.html">Rankings</a></li>
+      </ul>
+    </div>
+
+    <!-- ============================================================
+		     HEADER — logo + server info inline
+		============================================================ -->
+    <div id="header">
+      <div class="kenda-header-inner">
+        <a href="index.html">
+          <img class="webengine-mu-logo" src="img/logo.png" title="Kenda MU Online" />
+        </a>
+        <div class="header-info">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="col-xs-12 header-info-block">
+                <div class="row">
+                  <div class="col-xs-6 text-left">Usuarios en línea:</div>
+                  <div class="col-xs-6 text-right online-count">245</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="webengine-online-bar">
+                      <div class="webengine-online-bar-progress" style="width: 49%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-left">Hora del servidor:</div>
+                  <div class="col-xs-6 text-right"><time id="tServerTime">14:32:07</time> <span id="tServerDate">24/07/2026</span></div>
+
+                  <div class="col-xs-6 text-left">Tu hora:</div>
+                  <div class="col-xs-6 text-right"><time id="tLocalTime">14:32:07</time> <span id="tLocalDate">24/07/2026</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+		     CONTENT — Información del servidor
+		============================================================ -->
+    <div id="container">
+      <div id="content">
+        <div class="col-xs-12">
+          <div class="page-title"><span>Información del servidor</span></div>
+
+          <!-- ========== CONFIGURACIÓN — stat cards ========== -->
+          <h2 class="kenda-tier-title">Configuración del servidor</h2>
+          <div class="kenda-stats">
+            <div class="kenda-stat">
+              <span class="kenda-stat-value">x500</span>
+              <span class="kenda-stat-label">Experiencia</span>
+              <span class="kenda-stat-sub">No dinámica</span>
+            </div>
+            <div class="kenda-stat">
+              <span class="kenda-stat-value">20%</span>
+              <span class="kenda-stat-label">Drop rate</span>
+            </div>
+            <div class="kenda-stat">
+              <span class="kenda-stat-value">3</span>
+              <span class="kenda-stat-label">Cuentas por IP</span>
+              <span class="kenda-stat-sub">Máximo</span>
+            </div>
+            <div class="kenda-stat">
+              <span class="kenda-stat-value kenda-stat-value-text">Season 6</span>
+              <span class="kenda-stat-label">Versión</span>
+            </div>
+            <div class="kenda-stat">
+              <span class="kenda-stat-value">3</span>
+              <span class="kenda-stat-label">Opts exe</span>
+              <span class="kenda-stat-sub">Máximo</span>
+            </div>
+          </div>
+
+          <!-- ========== CHAOS MACHINE — VIP vs sin VIP ========== -->
+          <h2 class="kenda-tier-title">Chaos Machine — items con luck</h2>
+          <div class="kenda-rates">
+            <div class="kenda-rates-head">
+              <span class="kenda-rates-level"></span>
+              <span class="kenda-rates-col">Sin VIP</span>
+              <span class="kenda-rates-col kenda-rates-col-vip">Con VIP</span>
+            </div>
+
+            <div class="kenda-rate-row">
+              <span class="kenda-rates-level">+10</span>
+              <span class="kenda-rates-col">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill" style="width: 80%"></span></span>
+                <span class="kenda-rate-num">80%</span>
+              </span>
+              <span class="kenda-rates-col kenda-rates-col-vip">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill kenda-rate-fill-vip" style="width: 90%"></span></span>
+                <span class="kenda-rate-num">90%</span>
+              </span>
+            </div>
+
+            <div class="kenda-rate-row">
+              <span class="kenda-rates-level">+11</span>
+              <span class="kenda-rates-col">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill" style="width: 70%"></span></span>
+                <span class="kenda-rate-num">70%</span>
+              </span>
+              <span class="kenda-rates-col kenda-rates-col-vip">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill kenda-rate-fill-vip" style="width: 80%"></span></span>
+                <span class="kenda-rate-num">80%</span>
+              </span>
+            </div>
+
+            <div class="kenda-rate-row">
+              <span class="kenda-rates-level">+12</span>
+              <span class="kenda-rates-col">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill" style="width: 60%"></span></span>
+                <span class="kenda-rate-num">60%</span>
+              </span>
+              <span class="kenda-rates-col kenda-rates-col-vip">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill kenda-rate-fill-vip" style="width: 70%"></span></span>
+                <span class="kenda-rate-num">70%</span>
+              </span>
+            </div>
+
+            <div class="kenda-rate-row">
+              <span class="kenda-rates-level">+13</span>
+              <span class="kenda-rates-col">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill" style="width: 50%"></span></span>
+                <span class="kenda-rate-num">50%</span>
+              </span>
+              <span class="kenda-rates-col kenda-rates-col-vip">
+                <span class="kenda-rate-bar"><span class="kenda-rate-fill kenda-rate-fill-vip" style="width: 60%"></span></span>
+                <span class="kenda-rate-num">60%</span>
+              </span>
+            </div>
+
+            <div class="kenda-rates-note">
+              Se permite el uso de <strong>10 TOLS</strong> y <strong>1 TCA</strong> por cada combinación. Se consideran estos rates sólo para items con luck; para los items sin luck se descuenta un
+              10% de probabilidad en cada combinación.
+            </div>
+          </div>
+
+          <!-- ========== COMANDOS ÚTILES ========== -->
+          <h2 class="kenda-tier-title">Comandos útiles</h2>
+          <div class="kenda-commands">
+            <div class="kenda-command">
+              <code class="kenda-command-key">Tecla "J"</code>
+              <span class="kenda-command-desc">Abre el banco de joyas</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/agi [puntos]</code>
+              <span class="kenda-command-desc">Sube puntos de agilidad del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/str [puntos]</code>
+              <span class="kenda-command-desc">Sube puntos de fuerza del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/vit [puntos]</code>
+              <span class="kenda-command-desc">Sube puntos de vitalidad del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/ene [puntos]</code>
+              <span class="kenda-command-desc">Sube puntos de energía del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/cmd [puntos]</code>
+              <span class="kenda-command-desc">Sube puntos de comando del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/pkclear</code>
+              <span class="kenda-command-desc">Limpia el estado de PK del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/reset</code>
+              <span class="kenda-command-desc">Resetea el personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/autoreset</code>
+              <span class="kenda-command-desc">Activa el auto-reset del personaje</span>
+            </div>
+            <div class="kenda-command">
+              <code class="kenda-command-key">/move [mapa]</code>
+              <span class="kenda-command-desc">Mueve el personaje a un mapa específico (aplican reglas de nivel)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+		     FOOTER
+		============================================================ -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#">Términos del servicio</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Política de privacidad</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Política de reembolsos</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="informacion.html">Información del servidor</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Contáctanos</a>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-xs-8">
+            <p>
+              Kenda &copy; 2026, TODOS LOS DERECHOS RESERVADOS.<br />
+              Este sitio no está asociado ni respaldado de ninguna manera por Webzen Inc.
+            </p>
+            <br />
+
+            Powered by <a href="https://webenginecms.org/" target="_blank">WebEngine CMS</a>
+          </div>
+          <div class="col-xs-4">
+            <div class="col-xs-4 text-center">
+              <a href="#" target="_blank" class="footer-social-link">
+                <img src="img/social/facebook.svg" width="50px" height="auto" />
+              </a>
+            </div>
+            <div class="col-xs-4 text-center">
+              <a href="#" target="_blank" class="footer-social-link">
+                <img src="img/social/instagram.svg" width="50px" height="auto" />
+              </a>
+            </div>
+            <div class="col-xs-4 text-center">
+              <a href="#" target="_blank" class="footer-social-link">
+                <img src="img/social/discord.svg" width="50px" height="auto" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

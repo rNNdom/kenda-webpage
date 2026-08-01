@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Eventos e invasiones - Kenda MU Online</title>
+    <meta name="generator" content="WebEngine 1.2.7" />
+    <meta name="author" content="Kenda MU Online" />
+    <meta name="description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU." />
+    <meta name="keywords" content="MU, MU online, Season20, servidor privado, Kenda" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kenda MU Online" />
+    <meta property="og:description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU." />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Kenda MU Online" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:wght@400;700;900" rel="stylesheet" />
+    <link href="css/palette.css" rel="stylesheet" media="screen" />
+    <link href="css/style.css" rel="stylesheet" media="screen" />
+    <link href="css/profiles.css" rel="stylesheet" media="screen" />
+    <link href="css/castle-siege.css" rel="stylesheet" media="screen" />
+    <link href="css/override.css" rel="stylesheet" media="screen" />
+    <link href="css/kenda.css" rel="stylesheet" media="screen" />
+    <script>
+      var baseUrl = ""
+    </script>
+  </head>
+  <body>
+    <!-- ============================================================
+		     GLOBAL TOP BAR — Guest state
+		============================================================ -->
+    <div class="global-top-bar">
+      <div class="global-top-bar-content">
+        <div class="row">
+          <div class="col-xs-6 text-left global-top-bar-nopadding"></div>
+          <div class="col-xs-6 text-right global-top-bar-nopadding">
+            <a href="#">Registrarse</a>
+            <span class="global-top-bar-separator">|</span>
+            <a href="#">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+		     NAVBAR
+		============================================================ -->
+    <div id="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="descargas.html">Descargas</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="rankings.html">Rankings</a></li>
+      </ul>
+    </div>
+
+    <!-- ============================================================
+		     HEADER — logo + server info inline
+		============================================================ -->
+    <div id="header">
+      <div class="kenda-header-inner">
+        <a href="index.html">
+          <img class="webengine-mu-logo" src="img/logo.png" title="Kenda MU Online" />
+        </a>
+        <div class="header-info">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="col-xs-12 header-info-block">
+                <div class="row">
+                  <div class="col-xs-6 text-left">Usuarios en línea:</div>
+                  <div class="col-xs-6 text-right online-count">245</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="webengine-online-bar">
+                      <div class="webengine-online-bar-progress" style="width: 49%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 text-left">Hora del servidor:</div>
+                  <div class="col-xs-6 text-right"><time id="tServerTime">14:32:07</time> <span id="tServerDate">24/07/2026</span></div>
+
+                  <div class="col-xs-6 text-left">Tu hora:</div>
+                  <div class="col-xs-6 text-right"><time id="tLocalTime">14:32:07</time> <span id="tLocalDate">24/07/2026</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+		     CONTENT — Eventos e invasiones
+		     (custom section; in production maps to a custom module
+		      e.g. modules/eventos.php, auto-routed at /eventos)
+		============================================================ -->
+    <div id="container">
+      <div id="content">
+        <div class="col-xs-12">
+          <div class="page-title"><span>Eventos e invasiones</span></div>
+          <p class="kenda-events-intro">
+            Las invasiones son eventos especiales donde jefes y monstruos únicos aparecen en el continente de MU. Derrotarlos otorga recompensas exclusivas — y en Kenda, también prestigio para tu
+            clan.
+          </p>
+
+          <!-- ========== TIER MAYOR ========== -->
+          <h2 class="kenda-tier-title">Invasiones</h2>
+
+          <div class="kenda-event kenda-event-major">
+            <div class="kenda-event-img">
+              <img src="img/invasions/white-wizzard.webp" alt="White Wizard" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>White Wizard <span class="kenda-event-tier kenda-event-tier-major">Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="kenda-event kenda-event-major">
+            <div class="kenda-event-img">
+              <img src="img/invasions/skeletonking.jpeg" alt="Skeleton King" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Skeleton King <span class="kenda-event-tier kenda-event-tier-major">Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="kenda-event kenda-event-major">
+            <div class="kenda-event-img">
+              <img src="img/invasions/red_dragon.png" alt="Red Dragon" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Red Dragon <span class="kenda-event-tier kenda-event-tier-major">Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <!-- ========== TIER MENOR ========== -->
+          <h2 class="kenda-tier-title">Mini Invasiones</h2>
+
+          <div class="kenda-event">
+            <div class="kenda-event-img">
+              <img src="img/invasions/hydra.png" alt="Hydra" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Hydra <span class="kenda-event-tier">Mini Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="kenda-event">
+            <div class="kenda-event-img">
+              <img src="img/invasions/icequeen.png" alt="Ice Queen" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Ice Queen <span class="kenda-event-tier">Mini Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="kenda-event">
+            <div class="kenda-event-img">
+              <img src="img/invasions/zaikan.jpeg" alt="Zaikan" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Zaikan <span class="kenda-event-tier">Mini Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="kenda-event">
+            <div class="kenda-event-img">
+              <img src="img/invasions/rabbit.png" alt="Rabbit" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Rabbit <span class="kenda-event-tier">Mini Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="kenda-event">
+            <div class="kenda-event-img">
+              <img src="img/invasions/blessing_pouch.png" alt="Blessing Pouch" />
+            </div>
+            <div class="kenda-event-body">
+              <h3>Blessing Pouch <span class="kenda-event-tier">Mini Invasión</span></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+		     FOOTER
+		============================================================ -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#">Términos del servicio</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Política de privacidad</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Política de reembolsos</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Información del servidor</a>
+            <span style="padding: 0px 5px">|</span>
+            <a href="#">Contáctanos</a>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-xs-8">
+            <p>
+              Kenda &copy; 2026, TODOS LOS DERECHOS RESERVADOS.<br />
+              Este sitio no está asociado ni respaldado de ninguna manera por Webzen Inc.
+            </p>
+            <br />
+
+            Powered by <a href="https://webenginecms.org/" target="_blank">WebEngine CMS</a>
+          </div>
+          <div class="col-xs-4">
+            <div class="col-xs-4 text-center">
+              <a href="#" target="_blank" class="footer-social-link">
+                <img src="img/social/facebook.svg" width="50px" height="auto" />
+              </a>
+            </div>
+            <div class="col-xs-4 text-center">
+              <a href="#" target="_blank" class="footer-social-link">
+                <img src="img/social/instagram.svg" width="50px" height="auto" />
+              </a>
+            </div>
+            <div class="col-xs-4 text-center">
+              <a href="#" target="_blank" class="footer-social-link">
+                <img src="img/social/discord.svg" width="50px" height="auto" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

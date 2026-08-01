@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mejores rankings - Kenda MU Online</title>
+		<meta name="generator" content="WebEngine 1.2.7"/>
+		<meta name="author" content="Kenda MU Online"/>
+		<meta name="description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU."/>
+		<meta name="keywords" content="MU, MU online, Season20, servidor privado, Kenda"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Kenda MU Online" />
+		<meta property="og:description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU." />
+		<meta property="og:image" content="img/logo.png" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="Kenda MU Online" />
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cinzel:wght@400;700;900" rel="stylesheet">
+		<link href="css/palette.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="css/profiles.css" rel="stylesheet" media="screen">
+		<link href="css/castle-siege.css" rel="stylesheet" media="screen">
+		<link href="css/override.css" rel="stylesheet" media="screen">
+		<link href="css/kenda.css" rel="stylesheet" media="screen">
+		<script>
+			var baseUrl = '';
+		</script>
+	</head>
+	<body>
+		<!-- ============================================================
+		     GLOBAL TOP BAR — Guest state
+		============================================================ -->
+		<div class="global-top-bar">
+			<div class="global-top-bar-content">
+				<div class="row">
+					<div class="col-xs-6 text-left global-top-bar-nopadding">
+					</div>
+					<div class="col-xs-6 text-right global-top-bar-nopadding">
+						<a href="#">Registrarse</a>
+						<span class="global-top-bar-separator">|</span>
+						<a href="#">Iniciar sesión</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================
+		     NAVBAR
+		============================================================ -->
+		<div id="navbar">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="informacion.html">Información</a></li>
+				<li><a href="descargas.html">Descargas</a></li>
+				<li><a href="eventos.html">Eventos</a></li>
+				<li><a href="rankings.html">Rankings</a></li>
+			</ul>
+		</div>
+
+		<!-- ============================================================
+		     HEADER LOGO
+		============================================================ -->
+		<div id="header">
+			<div class="kenda-header-inner">
+				<a href="index.html">
+					<img class="webengine-mu-logo" src="img/logo.png" title="Kenda MU Online"/>
+				</a>
+				<div class="header-info">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="col-xs-12 header-info-block">
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								Usuarios en línea:
+							</div>
+							<div class="col-xs-6 text-right online-count">
+								245
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="webengine-online-bar">
+									<div class="webengine-online-bar-progress" style="width:49%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								Hora del servidor:
+							</div>
+							<div class="col-xs-6 text-right">
+								<time id="tServerTime">14:32:07</time> <span id="tServerDate">24/07/2026</span>
+							</div>
+
+							<div class="col-xs-6 text-left">
+								Tu hora:
+							</div>
+							<div class="col-xs-6 text-right">
+								<time id="tLocalTime">14:32:07</time> <span id="tLocalDate">24/07/2026</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================
+		     CONTENT — modules/rankings/level.php
+		============================================================ -->
+		<div id="container">
+			<div id="content">
+				<div class="col-xs-12">
+
+					<div class="page-title"><span>Mejores rankings</span></div>
+
+					<!-- Rankings::rankingsMenu() -->
+					<div class="rankings_menu">
+						<a href="rankings.html" class="active">Top de nivel</a>
+						<a href="#">Top de resets</a>
+						<a href="#">Top de asesinos</a>
+						<a href="#">Top de guilds</a>
+						<a href="#">Top de grand resets</a>
+						<a href="#">Top de votos</a>
+						<a href="#">Top de Gens</a>
+						<a href="#">Top de nivel de master</a>
+					</div>
+
+					<!-- Rankings::rankingsFilterMenu() — class filter (interactive via main.js) -->
+					<div class="text-center">
+						<ul class="rankings-class-filter">
+							<li><a onclick="rankingsFilterRemove()" class="rankings-class-filter-selection"><img class="rankings-class-filter-image" src="img/character-avatars/avatar.jpg" /><br />Todas</a></li>
+							<li><a onclick="rankingsFilterByClass(0,1,2,3)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/dw.jpg" /><br />Dark Wizards</a></li>
+							<li><a onclick="rankingsFilterByClass(16,17,18,19)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/dk.jpg" /><br />Dark Knights</a></li>
+							<li><a onclick="rankingsFilterByClass(32,33,34,35)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/elf.jpg" /><br />Elves</a></li>
+							<li><a onclick="rankingsFilterByClass(48,49,50,51)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/mg.jpg" /><br />Magic Gladiators</a></li>
+							<li><a onclick="rankingsFilterByClass(64,65,66,67)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/dl.jpg" /><br />Dark Lords</a></li>
+							<li><a onclick="rankingsFilterByClass(80,81,82,83)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/sum.jpg" /><br />Summoners</a></li>
+							<li><a onclick="rankingsFilterByClass(96,97,98,99)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/rf.jpg" /><br />Rage Fighters</a></li>
+							<li><a onclick="rankingsFilterByClass(112,113,114,115)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/gl.jpg" /><br />Grow Lancers</a></li>
+							<li><a onclick="rankingsFilterByClass(128,129,130,131)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/rw.jpg" /><br />Rune Wizards</a></li>
+							<li><a onclick="rankingsFilterByClass(144,145,146,147)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/sl.jpg" /><br />Slayers</a></li>
+							<li><a onclick="rankingsFilterByClass(160,161,162,163)" class="rankings-class-filter-selection rankings-class-filter-grayscale"><img class="rankings-class-filter-image" src="img/character-avatars/gc.jpg" /><br />Gun Crushers</a></li>
+						</ul>
+					</div>
+
+					<!-- Rankings table (rankings/level.php:37-66) -->
+					<table class="table rankings-table">
+						<tr>
+							<td style="font-weight:bold;"></td>
+							<td style="font-weight:bold;">Clase</td>
+							<td style="font-weight:bold;">Personaje</td>
+							<td style="font-weight:bold;">Nivel</td>
+							<td style="font-weight:bold;">Ubicación</td>
+						</tr>
+						<tr data-class-id="16">
+							<td class="rankings-table-place">1</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Dark Knight" alt="Dark Knight" src="img/character-avatars/dk.jpg" /></td>
+							<td><a href="#" target="_blank">DarkSlayer</a><img src="img/online.png" class="online-status-indicator"/></td>
+							<td>1,247</td>
+							<td>Lorencia</td>
+						</tr>
+						<tr data-class-id="32">
+							<td class="rankings-table-place">2</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Fairy Elf" alt="Fairy Elf" src="img/character-avatars/elf.jpg" /></td>
+							<td><a href="#" target="_blank">MysticElf</a><img src="img/online.png" class="online-status-indicator"/></td>
+							<td>1,198</td>
+							<td>Noria</td>
+						</tr>
+						<tr data-class-id="0">
+							<td class="rankings-table-place">3</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Dark Wizard" alt="Dark Wizard" src="img/character-avatars/dw.jpg" /></td>
+							<td><a href="#" target="_blank">SoulReaper</a><img src="img/offline.png" class="online-status-indicator"/></td>
+							<td>1,156</td>
+							<td>Devias</td>
+						</tr>
+						<tr data-class-id="64">
+							<td class="rankings-table-place">4</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Dark Lord" alt="Dark Lord" src="img/character-avatars/dl.jpg" /></td>
+							<td><a href="#" target="_blank">NightLord</a><img src="img/offline.png" class="online-status-indicator"/></td>
+							<td>1,102</td>
+							<td>Lorencia Bar</td>
+						</tr>
+						<tr data-class-id="96">
+							<td class="rankings-table-place">5</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Rage Fighter" alt="Rage Fighter" src="img/character-avatars/rf.jpg" /></td>
+							<td><a href="#" target="_blank">IronFist</a><img src="img/online.png" class="online-status-indicator"/></td>
+							<td>1,087</td>
+							<td>Losttower</td>
+						</tr>
+						<tr data-class-id="128">
+							<td class="rankings-table-place">6</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Rune Wizard" alt="Rune Wizard" src="img/character-avatars/rw.jpg" /></td>
+							<td><a href="#" target="_blank">ArcaneRune</a><img src="img/offline.png" class="online-status-indicator"/></td>
+							<td>1,054</td>
+							<td>Elbeland</td>
+						</tr>
+						<tr data-class-id="160">
+							<td class="rankings-table-place">7</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Gun Crusher" alt="Gun Crusher" src="img/character-avatars/gc.jpg" /></td>
+							<td><a href="#" target="_blank">ShadowGun</a><img src="img/online.png" class="online-status-indicator"/></td>
+							<td>1,031</td>
+							<td>Aida</td>
+						</tr>
+						<tr data-class-id="144">
+							<td class="rankings-table-place">8</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Slayer" alt="Slayer" src="img/character-avatars/sl.jpg" /></td>
+							<td><a href="#" target="_blank">BloodOath</a><img src="img/offline.png" class="online-status-indicator"/></td>
+							<td>998</td>
+							<td>Dungeon</td>
+						</tr>
+						<tr data-class-id="48">
+							<td class="rankings-table-place">9</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Magic Gladiator" alt="Magic Gladiator" src="img/character-avatars/mg.jpg" /></td>
+							<td><a href="#" target="_blank">BladeMaster</a><img src="img/online.png" class="online-status-indicator"/></td>
+							<td>987</td>
+							<td>Atlans</td>
+						</tr>
+						<tr data-class-id="80">
+							<td class="rankings-table-place">10</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Summoner" alt="Summoner" src="img/character-avatars/sum.jpg" /></td>
+							<td><a href="#" target="_blank">LemurQueen</a><img src="img/offline.png" class="online-status-indicator"/></td>
+							<td>965</td>
+							<td>Tarkan</td>
+						</tr>
+						<tr data-class-id="112">
+							<td class="rankings-table-place">11</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Grow Lancer" alt="Grow Lancer" src="img/character-avatars/gl.jpg" /></td>
+							<td><a href="#" target="_blank">MirageK</a><img src="img/online.png" class="online-status-indicator"/></td>
+							<td>942</td>
+							<td>Icarus</td>
+						</tr>
+						<tr data-class-id="16">
+							<td class="rankings-table-place">12</td>
+							<td><img class="rankings-class-image" data-toggle="tooltip" data-placement="top" title="Dark Knight" alt="Dark Knight" src="img/character-avatars/dk.jpg" /></td>
+							<td><a href="#" target="_blank">WarMachine</a><img src="img/offline.png" class="online-status-indicator"/></td>
+							<td>918</td>
+							<td>Kanturu</td>
+						</tr>
+					</table>
+					<div class="rankings-update-time">
+						Última actualización @ 24/07/2026 - 02:30 PM
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================
+		     FOOTER
+		============================================================ -->
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="row">
+					<div class="col-xs-12">
+						<a href="#">Términos del servicio</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Política de privacidad</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Política de reembolsos</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Información del servidor</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Contáctanos</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-xs-8">
+						<p>
+							Kenda &copy; 2026, TODOS LOS DERECHOS RESERVADOS.<br />
+							Este sitio no está asociado ni respaldado de ninguna manera por Webzen Inc.
+						</p>
+						<br />
+
+						Powered by <a href="https://webenginecms.org/" target="_blank">WebEngine CMS</a>
+					</div>
+					<div class="col-xs-4">
+						<div class="col-xs-4 text-center">
+							<a href="#" target="_blank" class="footer-social-link">
+								<img src="img/social/facebook.svg" width="50px" height="auto" />
+							</a>
+						</div>
+						<div class="col-xs-4 text-center">
+							<a href="#" target="_blank" class="footer-social-link">
+								<img src="img/social/instagram.svg" width="50px" height="auto" />
+							</a>
+						</div>
+						<div class="col-xs-4 text-center">
+							<a href="#" target="_blank" class="footer-social-link">
+								<img src="img/social/discord.svg" width="50px" height="auto" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/events.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mi cuenta - Kenda MU Online</title>
+		<meta name="generator" content="WebEngine 1.2.7"/>
+		<meta name="author" content="Kenda MU Online"/>
+		<meta name="description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU."/>
+		<meta name="keywords" content="MU, MU online, Season20, servidor privado, Kenda"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Kenda MU Online" />
+		<meta property="og:description" content="¡Únete a Kenda MU Online! El RPG de fantasía free-to-play basado en el legendario Continente de MU." />
+		<meta property="og:image" content="img/logo.png" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="Kenda MU Online" />
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cinzel:wght@400;700;900" rel="stylesheet">
+		<link href="css/palette.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="css/profiles.css" rel="stylesheet" media="screen">
+		<link href="css/castle-siege.css" rel="stylesheet" media="screen">
+		<link href="css/override.css" rel="stylesheet" media="screen">
+		<link href="css/kenda.css" rel="stylesheet" media="screen">
+		<script>
+			var baseUrl = '';
+		</script>
+	</head>
+	<body>
+		<!-- ============================================================
+		     GLOBAL TOP BAR — Logged-in state: Panel de usuario | Cerrar sesión
+		============================================================ -->
+		<div class="global-top-bar">
+			<div class="global-top-bar-content">
+				<div class="row">
+					<div class="col-xs-6 text-left global-top-bar-nopadding">
+					</div>
+					<div class="col-xs-6 text-right global-top-bar-nopadding">
+						<a href="usercp.html">Panel de usuario</a>
+						<span class="global-top-bar-separator">|</span>
+						<a href="index.html" class="logout">Cerrar sesión</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================
+		     NAVBAR
+		============================================================ -->
+		<div id="navbar">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="informacion.html">Información</a></li>
+				<li><a href="descargas.html">Descargas</a></li>
+				<li><a href="eventos.html">Eventos</a></li>
+				<li><a href="rankings.html">Rankings</a></li>
+			</ul>
+		</div>
+
+		<!-- ============================================================
+		     HEADER LOGO
+		============================================================ -->
+		<div id="header">
+			<div class="kenda-header-inner">
+				<a href="index.html">
+					<img class="webengine-mu-logo" src="img/logo.png" title="Kenda MU Online"/>
+				</a>
+				<div class="header-info">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="col-xs-12 header-info-block">
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								Usuarios en línea:
+							</div>
+							<div class="col-xs-6 text-right online-count">
+								245
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="webengine-online-bar">
+									<div class="webengine-online-bar-progress" style="width:49%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								Hora del servidor:
+							</div>
+							<div class="col-xs-6 text-right">
+								<time id="tServerTime">14:32:07</time> <span id="tServerDate">24/07/2026</span>
+							</div>
+
+							<div class="col-xs-6 text-left">
+								Tu hora:
+							</div>
+							<div class="col-xs-6 text-right">
+								<time id="tLocalTime">14:32:07</time> <span id="tLocalDate">24/07/2026</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================
+		     CONTENT  (index.php:135-141 — usercp 8/4 split)
+		     Left: modules/usercp/myaccount.php
+		     Right: inc/modules/sidebar.php
+		============================================================ -->
+		<div id="container">
+			<div id="content">
+				<div class="col-xs-8">
+
+					<!-- ========== modules/usercp/myaccount.php — account table ========== -->
+					<div class="page-title"><span>Mi cuenta</span></div>
+					<table class="table myaccount-table">
+						<tr>
+							<td>Estado de la cuenta:</td>
+							<td><span class="label label-default">Activa</span></td>
+						</tr>
+						<tr>
+							<td>Nombre de usuario:</td>
+							<td>darkslayer92</td>
+						</tr>
+						<tr>
+							<td>Dirección de correo:</td>
+							<td>player@example.com <a href="#" class="btn btn-xs btn-primary pull-right">cambiar</a></td>
+						</tr>
+						<tr>
+							<td>Contraseña:</td>
+							<td>&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226; <a href="#" class="btn btn-xs btn-primary pull-right">cambiar</a></td>
+						</tr>
+						<tr>
+							<td>Estado en línea:</td>
+							<td><span class="label label-success">En línea</span></td>
+						</tr>
+						<tr>
+							<td>Créditos:</td>
+							<td>1,250</td>
+						</tr>
+					</table>
+
+					<!-- ========== myaccount.php — character cards ========== -->
+					<div class="page-title"><span>Mis personajes</span></div>
+					<div class="row text-center">
+						<div class="col-xs-3">
+							<div class="myaccount-character-name"><a href="#" target="_blank">DarkSlayer</a><img src="img/online.png" class="online-status-indicator" alt=""/></div>
+							<div class="myaccount-character-block">
+								<a href="#" target="_blank">
+									<img src="img/character-avatars/dk.jpg" />
+								</a>
+							</div>
+							<div class="myaccount-character-block-location">Lorencia<br />128, 141</div>
+							<span class="myaccount-character-block-level">1,247</span>
+						</div>
+						<div class="col-xs-3">
+							<div class="myaccount-character-name"><a href="#" target="_blank">MysticElf</a><img src="img/offline.png" class="online-status-indicator" alt=""/></div>
+							<div class="myaccount-character-block">
+								<a href="#" target="_blank">
+									<img src="img/character-avatars/elf.jpg" />
+								</a>
+							</div>
+							<div class="myaccount-character-block-location">Noria<br />172, 106</div>
+							<span class="myaccount-character-block-level">1,198</span>
+						</div>
+						<div class="col-xs-3">
+							<div class="myaccount-character-name"><a href="#" target="_blank">SoulReaper</a><img src="img/offline.png" class="online-status-indicator" alt=""/></div>
+							<div class="myaccount-character-block">
+								<a href="#" target="_blank">
+									<img src="img/character-avatars/dw.jpg" />
+								</a>
+							</div>
+							<div class="myaccount-character-block-location">Devias<br />184, 30</div>
+							<span class="myaccount-character-block-level">1,156</span>
+						</div>
+						<div class="col-xs-3">
+							<div class="myaccount-character-name"><a href="#" target="_blank">NightLord</a><img src="img/offline.png" class="online-status-indicator" alt=""/></div>
+							<div class="myaccount-character-block">
+								<a href="#" target="_blank">
+									<img src="img/character-avatars/dl.jpg" />
+								</a>
+							</div>
+							<div class="myaccount-character-block-location">Lorencia Bar<br />135, 126</div>
+							<span class="myaccount-character-block-level">1,102</span>
+						</div>
+					</div>
+
+					<!-- ========== myaccount.php — connection history (IGCN) ========== -->
+					<div class="page-title"><span>Historial de conexiones</span></div>
+					<table class="table table-condensed general-table-ui">
+						<tr>
+							<td>Fecha</td>
+							<td>Servidor</td>
+							<td>IP</td>
+							<td>Acción</td>
+						</tr>
+						<tr><td>2026-07-24 14:02:11</td><td>Kenda</td><td>192.168.1.42</td><td>Login</td></tr>
+						<tr><td>2026-07-23 22:47:03</td><td>Kenda</td><td>192.168.1.42</td><td>Logout</td></tr>
+						<tr><td>2026-07-23 19:15:44</td><td>Kenda</td><td>192.168.1.42</td><td>Login</td></tr>
+						<tr><td>2026-07-22 21:33:29</td><td>Kenda</td><td>10.0.0.18</td><td>Login</td></tr>
+						<tr><td>2026-07-21 18:09:57</td><td>Kenda</td><td>10.0.0.18</td><td>Logout</td></tr>
+					</table>
+
+				</div>
+				<div class="col-xs-4">
+
+					<!-- ========== inc/modules/sidebar.php — usercp panel ========== -->
+					<div class="panel panel-sidebar panel-usercp">
+						<div class="panel-heading">
+							<h3 class="panel-title">Panel de control de usuario <a href="index.html" class="btn btn-primary btn-xs pull-right">Cerrar sesión</a></h3>
+						</div>
+						<div class="panel-body">
+							<!-- templateBuildUsercp() from usercp.json -->
+							<ul>
+								<li><img src="img/icons/account.png"><a href="usercp.html">Mi cuenta</a></li>
+								<li><img src="img/icons/reset.png"><a href="#">Reset de personaje</a></li>
+								<li><img src="img/icons/unstick.png"><a href="#">Desbloquear personaje</a></li>
+								<li><img src="img/icons/clearpk.png"><a href="#">Limpiar PK</a></li>
+								<li><img src="img/icons/fixstats.png"><a href="#">Resetear stats</a></li>
+								<li><img src="img/icons/addstats.png"><a href="#">Agregar stats</a></li>
+								<li><img src="img/icons/clearst.png"><a href="#">Limpiar árbol de habilidades</a></li>
+								<li><img src="img/icons/vote.png"><a href="#">Votar por créditos</a></li>
+								<li><img src="img/icons/donate.png"><a href="#">Comprar créditos</a></li>
+								<li><img src="img/icons/zen.png"><a href="#">Comprar Zen</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- ========== sidebar.php — download banner ========== -->
+					<div class="sidebar-banner"><a href="#"><img src="img/sidebar_banner_download.jpg"/></a></div>
+
+					<!-- ========== sidebar.php — server info panel ========== -->
+					<div class="panel panel-sidebar">
+						<div class="panel-heading">
+							<h3 class="panel-title">Información del servidor</h3>
+						</div>
+						<div class="panel-body">
+							<table class="table">
+								<tr><td>Versión</td><td>Season 20</td></tr>
+								<tr><td>Experiencia</td><td>500x</td></tr>
+								<tr><td>Experiencia de master</td><td>250x</td></tr>
+								<tr><td>Drop</td><td>50%</td></tr>
+								<tr><td>Total de cuentas</td><td style="font-weight:bold;">4,812</td></tr>
+								<tr><td>Total de personajes</td><td style="font-weight:bold;">9,347</td></tr>
+								<tr><td>Total de guilds</td><td style="font-weight:bold;">286</td></tr>
+								<tr><td>Usuarios en línea</td><td style="color:#00aa00;font-weight:bold;">245</td></tr>
+							</table>
+						</div>
+					</div>
+
+					<!-- ========== templateCastleSiegeWidget() ========== -->
+					<div class="panel castle-owner-widget">
+						<div class="panel-heading">
+							<h3 class="panel-title">Castle Siege</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-6 text-center">
+									<img src="img/profiles/guild.jpg" width="100" height="100" />
+								</div>
+								<div class="col-sm-6">
+									<span class="alt">Dueño del castillo</span><br />
+									<a href="#" target="_blank">Olympus</a><br /><br />
+									<span class="alt">Líder del guild</span><br />
+									<a href="#" target="_blank">DarkSlayer</a>
+								</div>
+							</div>
+							<div class="row" style="margin-top: 20px;">
+								<div class="col-sm-12 text-center">
+									<span class="alt">Etapa</span><br />
+									Período de registro<br /><br />
+									<span class="alt">Batalla de Castle Siege</span><br />
+									2d 03:27:53<br /><br />
+									<a href="#" class="btn btn-castlewidget btn-xs">Información del castillo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================
+		     FOOTER
+		============================================================ -->
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="row">
+					<div class="col-xs-12">
+						<a href="#">Términos del servicio</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Política de privacidad</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Política de reembolsos</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Información del servidor</a>
+						<span style="padding:0px 5px;">|</span>
+						<a href="#">Contáctanos</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-xs-8">
+						<p>
+							Kenda &copy; 2026, TODOS LOS DERECHOS RESERVADOS.<br />
+							Este sitio no está asociado ni respaldado de ninguna manera por Webzen Inc.
+						</p>
+						<br />
+
+						Powered by <a href="https://webenginecms.org/" target="_blank">WebEngine CMS</a>
+					</div>
+					<div class="col-xs-4">
+						<div class="col-xs-4 text-center">
+							<a href="#" target="_blank" class="footer-social-link">
+								<img src="img/social/facebook.svg" width="50px" height="auto" />
+							</a>
+						</div>
+						<div class="col-xs-4 text-center">
+							<a href="#" target="_blank" class="footer-social-link">
+								<img src="img/social/instagram.svg" width="50px" height="auto" />
+							</a>
+						</div>
+						<div class="col-xs-4 text-center">
+							<a href="#" target="_blank" class="footer-social-link">
+								<img src="img/social/discord.svg" width="50px" height="auto" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/events.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	</body>
+</html>

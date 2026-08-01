@@ -1,0 +1,33 @@
+/*!
+ =========================================================
+ * KENDA MU Online — Design Tokens
+ * Palette extracted from the KENDA server logo
+ =========================================================
+ */
+:root {
+	/* Brand palette (from logo) */
+	--carbon-black: #232323;
+	--onyx: #141514;
+	--charcoal: #55514f;
+	--molten-lava: #780303;
+	--coffee-bean: #1d0c0b;
+
+	/* Accent scale (derived from molten-lava) */
+	--accent: #a01212;        /* borders, buttons */
+	--accent-bright: #d42020; /* titles, active states */
+	--accent-hot: #e02b2b;    /* hover */
+	--accent-glow: rgba(120, 3, 3, 0.35); /* shadows, glows */
+
+	/* Text */
+	--text-muted: #8f8a86;    /* body text on dark */
+	--text-silver: #c9c9c9;   /* links (logo lettering silver) */
+
+	/* Surfaces */
+	--bg-panel: #141514;      /* onyx */
+	--bg-panel-head: #1d0c0b; /* coffee-bean */
+	--bg-input: #101010;
+	--bg-stripe: #1c1211;
+	--bg-hover: #221110;
+	--border-dark: #232323;   /* carbon-black */
+	--border-accent: #3a1515;
+}

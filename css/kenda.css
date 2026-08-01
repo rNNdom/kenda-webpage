@@ -1,0 +1,726 @@
+/*!
+ =========================================================
+ * KENDA MU Online — Custom design layer
+ * Loads LAST, after the base template stylesheets.
+ * Everything Kenda-specific lives here so porting the
+ * template means copying this one file.
+ =========================================================
+ */
+
+/* ----------------------------------------------------------------
+   GLOBAL DEPTH — de-flat the base template
+---------------------------------------------------------------- */
+
+/* Header: logo + server info side by side (saves vertical space) */
+#header {
+	padding: 35px 0px 10px 0px;
+	text-align: left;
+}
+.kenda-header-inner {
+	width: 1040px;
+	margin: 0px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.kenda-header-inner .webengine-mu-logo {
+	width: 300px;
+}
+
+/* Display typography: Cinzel everywhere a heading appears */
+.page-title,
+.home-news-block .home-news-block-header h2,
+.panel-sidebar > .panel-heading .panel-title,
+.rankings_menu span {
+	font-family: 'Cinzel', serif;
+	letter-spacing: 1px;
+}
+
+.page-title {
+	text-transform: uppercase;
+	text-shadow: 0 0 18px var(--accent-glow);
+}
+
+/* Main container: gradient surface + soft elevation + red top edge */
+#container {
+	background: linear-gradient(180deg, #181615 0%, var(--bg-panel) 120px);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-bottom: 0px;
+	box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+	position: relative;
+}
+#container::before {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 8%;
+	right: 8%;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(212, 32, 32, 0.55), transparent);
+}
+
+/* Footer: match container depth, red bottom edge */
+.footer {
+	background: linear-gradient(180deg, #151312, #0d0c0c);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-top: 0px;
+	position: relative;
+}
+.footer::after {
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 8%;
+	right: 8%;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(212, 32, 32, 0.35), transparent);
+}
+
+/* Panels: subtle vertical gradient + hairline + heading depth */
+.panel-sidebar {
+	background: linear-gradient(180deg, #1a1716 0%, var(--bg-panel) 100%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.panel-sidebar > .panel-heading {
+	background: linear-gradient(180deg, #2a1310 0%, var(--bg-panel-head) 100%);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.panel-sidebar > .panel-heading .panel-title {
+	font-size: 13px;
+	line-height: 1.4;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+.panel-sidebar > .panel-heading .panel-title .btn {
+	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 0px;
+	text-transform: none;
+	white-space: nowrap;
+	font-size: 11px;
+	float: none !important;
+	margin-left: auto;
+}
+
+/* Logo: red ambient glow */
+.webengine-mu-logo {
+	-webkit-filter: drop-shadow(0 0 30px rgba(120, 3, 3, 0.45));
+	filter: drop-shadow(0 0 30px rgba(120, 3, 3, 0.45));
+}
+.webengine-mu-logo:hover {
+	-webkit-filter: drop-shadow(0 0 45px rgba(212, 32, 32, 0.55)) brightness(110%);
+	filter: drop-shadow(0 0 45px rgba(212, 32, 32, 0.55)) brightness(110%);
+}
+
+/* Buttons: red gradient + glow on hover */
+.btn-primary {
+	background: linear-gradient(180deg, rgba(160, 18, 18, 0.15), rgba(120, 3, 3, 0.05));
+	transition: all .25s ease;
+}
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+	background: linear-gradient(180deg, #b01414, var(--molten-lava)) !important;
+	box-shadow: 0 0 14px rgba(212, 32, 32, 0.45);
+}
+
+/* News list: row hover feedback */
+.home-news-block-article {
+	padding: 4px 0px;
+	border-radius: 3px;
+	transition: background .2s ease;
+}
+.home-news-block-article:hover {
+	background: rgba(212, 32, 32, 0.06);
+}
+.home-news-block .home-news-block-header h2 {
+	border-left: 3px solid var(--accent-bright);
+	padding-left: 14px !important;
+	text-transform: uppercase;
+}
+
+/* Rankings: gold/silver/bronze podium places */
+.rankings-table tr:nth-child(2) .rankings-table-place { color: #ffd700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+.rankings-table tr:nth-child(3) .rankings-table-place { color: #c0c0c0; text-shadow: 0 0 10px rgba(192, 192, 192, 0.4); }
+.rankings-table tr:nth-child(4) .rankings-table-place { color: #cd7f32; text-shadow: 0 0 10px rgba(205, 127, 50, 0.4); }
+
+/* Rankings menu pills: hover depth */
+.rankings_menu a {
+	transition: all .25s ease;
+}
+.rankings_menu a:hover {
+	border-color: var(--accent-bright);
+	box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* ----------------------------------------------------------------
+   HERO — "Un reto distinto"
+---------------------------------------------------------------- */
+.kenda-hero {
+	width: 1040px;
+	margin: 40px auto 0px;
+	position: relative;
+}
+
+/* ambient red glow behind the hero */
+.kenda-hero::before {
+	content: '';
+	position: absolute;
+	top: -80px;
+	left: -120px;
+	right: -120px;
+	bottom: -60px;
+	background:
+		radial-gradient(ellipse 45% 55% at 25% 45%, rgba(120, 3, 3, 0.30), transparent 70%),
+		radial-gradient(ellipse 35% 45% at 80% 30%, rgba(120, 3, 3, 0.18), transparent 70%);
+	pointer-events: none;
+}
+
+.kenda-hero-inner {
+	position: relative;
+	padding: 20px 20px 0px 20px;
+}
+
+.kenda-kicker {
+	display: inline-block;
+	font-family: 'Cinzel', serif;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: var(--accent-hot);
+	border: 1px solid rgba(212, 32, 32, 0.4);
+	padding: 6px 16px;
+	border-radius: 2px;
+	background: rgba(120, 3, 3, 0.12);
+	text-shadow: 0 0 12px var(--accent-glow);
+}
+
+.kenda-hero-title {
+	font-family: 'Cinzel', serif;
+	font-size: 42px;
+	font-weight: 900;
+	line-height: 1.15;
+	color: #f2eded;
+	margin: 22px 0px 16px 0px;
+	text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+.kenda-hero-title .kenda-accent {
+	color: var(--accent-bright);
+	text-shadow: 0 0 24px var(--accent-glow);
+}
+
+.kenda-hero-text {
+	font-size: 15px;
+	line-height: 1.75;
+	color: var(--text-silver);
+	max-width: 92%;
+	margin-bottom: 28px;
+}
+.kenda-hero-text strong {
+	color: #f2eded;
+}
+
+/* CTA */
+.kenda-cta {
+	display: inline-block;
+	font-family: 'Cinzel', serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #ffffff !important;
+	background: linear-gradient(180deg, #b01414, var(--molten-lava));
+	border: 1px solid var(--accent-bright);
+	padding: 15px 38px;
+	border-radius: 3px;
+	box-shadow: 0 0 24px rgba(120, 3, 3, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	transition: all .25s ease;
+	cursor: pointer;
+}
+.kenda-cta:hover, .kenda-cta:focus {
+	background: linear-gradient(180deg, #d41818, #8f0404);
+	box-shadow: 0 0 40px rgba(212, 32, 32, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+	text-decoration: none !important;
+}
+.kenda-cta:focus-visible {
+	outline: 2px solid var(--accent-hot);
+	outline-offset: 3px;
+}
+
+/* Prize pool card */
+.kenda-prize {
+	background: linear-gradient(160deg, #221010 0%, var(--bg-panel) 70%);
+	border: 1px solid rgba(212, 32, 32, 0.35);
+	border-radius: 8px;
+	padding: 32px 24px 26px 24px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 50px rgba(120, 3, 3, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+	animation: kenda-prize-pulse 4s ease-in-out infinite;
+}
+.kenda-prize::before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 12%;
+	right: 12%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, var(--accent-bright), transparent);
+}
+@keyframes kenda-prize-pulse {
+	0%, 100% { box-shadow: 0 0 50px rgba(120, 3, 3, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.06); }
+	50%      { box-shadow: 0 0 70px rgba(212, 32, 32, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06); }
+}
+
+.kenda-prize-label {
+	display: block;
+	font-family: 'Cinzel', serif;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+
+.kenda-prize-amount {
+	display: block;
+	font-family: 'Cinzel', serif;
+	font-size: 68px;
+	font-weight: 900;
+	line-height: 1.05;
+	color: #f5f0f0;
+	margin: 10px 0px 4px 0px;
+	text-shadow: 0 0 30px rgba(212, 32, 32, 0.5), 0 2px 4px rgba(0, 0, 0, 0.8);
+	font-variant-numeric: tabular-nums;
+}
+.kenda-prize-amount small {
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: var(--accent-hot);
+	vertical-align: 8px;
+}
+
+.kenda-prize-badge {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #ffd700;
+	border: 1px solid rgba(255, 215, 0, 0.35);
+	background: rgba(255, 215, 0, 0.07);
+	padding: 4px 12px;
+	border-radius: 20px;
+	margin: 8px 0px 14px 0px;
+}
+
+.kenda-prize-note {
+	display: block;
+	font-size: 12.5px;
+	line-height: 1.6;
+	color: var(--text-muted);
+}
+.kenda-prize-note strong {
+	color: var(--text-silver);
+}
+
+/* Feature cards */
+.kenda-features {
+	margin-top: 34px;
+	margin-bottom: 45px;
+}
+.kenda-feature {
+	background: linear-gradient(180deg, #1c1817 0%, var(--bg-panel) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	padding: 26px 22px;
+	height: 100%;
+	transition: all .25s ease;
+	position: relative;
+}
+.kenda-feature:hover {
+	transform: translateY(-3px);
+	border-color: rgba(212, 32, 32, 0.45);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
+}
+.kenda-feature-icon {
+	display: inline-block;
+	color: var(--accent-bright);
+	margin-bottom: 14px;
+}
+.kenda-feature-icon svg {
+	width: 30px;
+	height: 30px;
+	stroke-width: 1.75;
+	filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+.kenda-feature h3 {
+	font-family: 'Cinzel', serif;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #efeaea;
+	margin: 0px 0px 10px 0px;
+}
+.kenda-feature p {
+	font-size: 13px;
+	line-height: 1.65;
+	color: var(--text-muted);
+	margin: 0px;
+}
+
+/* equal-height card row (Bootstrap 3 has no flex grid) */
+.kenda-features .row-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.kenda-features .row-flex > [class*="col-"] {
+	display: flex;
+}
+
+/* ----------------------------------------------------------------
+   EVENTS PAGE — invasion list
+---------------------------------------------------------------- */
+.kenda-events-intro {
+	font-size: 14px;
+	line-height: 1.7;
+	color: var(--text-muted);
+	max-width: 75%;
+	margin-bottom: 30px;
+}
+.kenda-events-intro strong { color: var(--text-silver); }
+
+.kenda-tier-title {
+	font-family: 'Cinzel', serif;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #efeaea;
+	border-left: 3px solid var(--accent-bright);
+	padding-left: 14px;
+	margin: 35px 0px 20px 0px;
+	text-shadow: 0 0 14px var(--accent-glow);
+}
+
+.kenda-event {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	background: linear-gradient(180deg, #1c1817 0%, var(--bg-panel) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	padding: 22px;
+	margin-bottom: 18px;
+	transition: all .25s ease;
+}
+.kenda-event:hover {
+	transform: translateY(-2px);
+	border-color: rgba(212, 32, 32, 0.45);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 18px var(--accent-glow);
+}
+
+.kenda-event-img {
+	flex: 0 0 150px;
+	width: 150px;
+	height: 150px;
+	border-radius: 6px;
+	background: radial-gradient(ellipse at center, #241b19 0%, #100d0c 75%);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.kenda-event-img img {
+	max-width: 88%;
+	max-height: 88%;
+	object-fit: contain;
+	filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.85));
+	transition: all .25s ease;
+}
+.kenda-event:hover .kenda-event-img img {
+	transform: scale(1.06);
+}
+
+.kenda-event-body { flex: 1; }
+.kenda-event-body h3 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-family: 'Cinzel', serif;
+	font-size: 19px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #efeaea;
+	margin: 0px 0px 10px 0px;
+}
+.kenda-event-body p {
+	font-size: 13.5px;
+	line-height: 1.65;
+	color: var(--text-muted);
+	margin: 0px;
+}
+
+/* tier badge */
+.kenda-event-tier {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	background: rgba(255, 255, 255, 0.04);
+	padding: 3px 10px;
+	border-radius: 20px;
+}
+
+/* tier mayor: gold prestige accents (matches podium gold) */
+.kenda-event-major {
+	border-color: rgba(255, 215, 0, 0.25);
+}
+.kenda-event-major:hover {
+	border-color: rgba(255, 215, 0, 0.5);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 215, 0, 0.15);
+}
+.kenda-event-major .kenda-event-img {
+	border-color: rgba(255, 215, 0, 0.35);
+	background: radial-gradient(ellipse at center, #2a2113 0%, #121008 75%);
+}
+.kenda-event-tier-major {
+	color: #ffd700;
+	border-color: rgba(255, 215, 0, 0.4);
+	background: rgba(255, 215, 0, 0.07);
+}
+
+/* ----------------------------------------------------------------
+   INFO PAGE — server config stats, chaos rates, commands
+---------------------------------------------------------------- */
+
+/* Stat cards (server config) */
+.kenda-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-bottom: 10px;
+}
+.kenda-stat {
+	flex: 1 1 0;
+	min-width: 150px;
+	background: linear-gradient(180deg, #1c1817 0%, var(--bg-panel) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	padding: 22px 14px 18px 14px;
+	text-align: center;
+	position: relative;
+	transition: all .25s ease;
+}
+.kenda-stat::before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 20%;
+	right: 20%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, var(--accent-bright), transparent);
+	opacity: 0.7;
+}
+.kenda-stat:hover {
+	transform: translateY(-2px);
+	border-color: rgba(212, 32, 32, 0.45);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 14px var(--accent-glow);
+}
+.kenda-stat-value {
+	display: block;
+	font-family: 'Cinzel', serif;
+	font-size: 34px;
+	font-weight: 900;
+	line-height: 1.1;
+	color: #f2eded;
+	text-shadow: 0 0 16px var(--accent-glow);
+	font-variant-numeric: tabular-nums;
+}
+.kenda-stat-value-text { font-size: 26px; padding-top: 6px; }
+.kenda-stat-label {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: var(--accent-hot);
+	margin-top: 8px;
+}
+.kenda-stat-sub {
+	display: block;
+	font-size: 11px;
+	color: var(--text-muted);
+	margin-top: 3px;
+}
+
+/* Chaos Machine rate comparison bars */
+.kenda-rates {
+	background: linear-gradient(180deg, #1c1817 0%, var(--bg-panel) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	padding: 20px 24px;
+}
+.kenda-rates-head,
+.kenda-rate-row {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+.kenda-rates-head {
+	padding-bottom: 12px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.kenda-rates-level {
+	flex: 0 0 60px;
+	font-family: 'Cinzel', serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: #efeaea;
+	font-variant-numeric: tabular-nums;
+}
+.kenda-rates-head .kenda-rates-level { font-size: 13px; }
+.kenda-rates-col {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+.kenda-rates-col-vip { color: #ffd700; }
+.kenda-rate-row { padding: 7px 0px; }
+.kenda-rate-bar {
+	flex: 1;
+	height: 10px;
+	background: #0a0909;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 5px;
+	overflow: hidden;
+}
+.kenda-rate-fill {
+	display: block;
+	height: 100%;
+	background: linear-gradient(90deg, #5e6366, #8f9a9e);
+	border-radius: 5px 0px 0px 5px;
+	transition: width .6s ease;
+}
+.kenda-rate-fill-vip {
+	background: linear-gradient(90deg, #8a6d1f, #ffd700);
+	box-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
+}
+.kenda-rate-num {
+	flex: 0 0 46px;
+	text-align: right;
+	font-size: 14px;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-silver);
+}
+.kenda-rates-col-vip .kenda-rate-num { color: #ffd700; }
+.kenda-rates-note {
+	margin-top: 16px;
+	padding-top: 14px;
+	border-top: 1px solid rgba(255, 255, 255, 0.07);
+	font-size: 12.5px;
+	color: var(--text-muted);
+}
+.kenda-rates-note strong { color: var(--text-silver); }
+
+/* Commands list */
+.kenda-commands {
+	background: linear-gradient(180deg, #1c1817 0%, var(--bg-panel) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	padding: 8px 24px;
+	margin-bottom: 10px;
+}
+.kenda-command {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	padding: 13px 0px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	transition: background .2s ease;
+}
+.kenda-command:last-child { border-bottom: 0px; }
+.kenda-command:hover { background: rgba(212, 32, 32, 0.04); }
+.kenda-command-key {
+	flex: 0 0 210px;
+	font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+	font-size: 13px;
+	font-weight: bold;
+	color: var(--accent-hot);
+	background: rgba(120, 3, 3, 0.12);
+	border: 1px solid rgba(212, 32, 32, 0.3);
+	border-radius: 4px;
+	padding: 5px 12px;
+	white-space: nowrap;
+}
+.kenda-command-desc {
+	font-size: 13.5px;
+	color: var(--text-muted);
+}
+
+/* Downloads panels */
+.panel-downloads {
+	background: linear-gradient(180deg, #1c1817 0%, var(--bg-panel) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.panel-downloads .panel-title {
+	font-family: 'Cinzel', serif;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #efeaea;
+	border-bottom: 1px solid rgba(212, 32, 32, 0.35);
+	text-shadow: 0 0 12px var(--accent-glow);
+}
+.panel-downloads .table tr td {
+	padding: 14px 10px !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	vertical-align: middle !important;
+}
+.panel-downloads .table tr:last-child td { border-bottom: 0px; }
+.panel-downloads .table tr td:first-child {
+	font-weight: bold;
+	color: var(--text-silver);
+}
+.panel-downloads .download-description {
+	font-weight: normal;
+	color: var(--text-muted);
+}
+.panel-downloads .table tr td.text-center {
+	color: var(--text-muted);
+	font-variant-numeric: tabular-nums;
+}
+.panel-downloads .table tr {
+	transition: background .2s ease;
+}
+.panel-downloads .table tr:hover {
+	background: rgba(212, 32, 32, 0.04);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.kenda-prize { animation: none; }
+	.kenda-feature:hover { transform: none; }
+	.kenda-cta:hover { transform: none; }
+	.kenda-event:hover { transform: none; }
+	.kenda-event:hover .kenda-event-img img { transform: none; }
+	.kenda-stat:hover { transform: none; }
+}
