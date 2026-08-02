@@ -179,10 +179,10 @@
   content: "";
   position: absolute;
   top: -80px;
-  left: -120px;
+  left: -10px;
   right: -120px;
   bottom: -60px;
-  background: radial-gradient(ellipse 45% 55% at 25% 45%, rgba(120, 3, 3, 0.3), transparent 70%), radial-gradient(ellipse 35% 45% at 80% 30%, rgba(120, 3, 3, 0.18), transparent 70%);
+  background: radial-gradient(ellipse 40% 45% at 25% 30%, rgba(120, 3, 3, 0.2), transparent 70%);
   pointer-events: none;
 }
 
